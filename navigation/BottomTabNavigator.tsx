@@ -19,17 +19,17 @@ export default function BottomTabNavigator() {
       initialRouteName="TabOne"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="TabOne"
+        name="Login"
         component={TabOneNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-log-in" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="Contact"
         component={TabTwoNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-contacts" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -52,7 +52,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+        options={{ headerTitle: 'Sign In' }}
       />
     </TabOneStack.Navigator>
   );
@@ -66,7 +66,7 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{ headerTitle: 'Contact' }}
       />
     </TabTwoStack.Navigator>
   );
